@@ -1,0 +1,19 @@
+{
+  "name": "flashcards-site",
+  "version": "1.0.0",
+  "description": "Static flashcard site generator for ESA Pages",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "dev": "http-server dist -p 8080 -c-1"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "csv-parse": "^5.5.3"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Flashcard Learning</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Views will be rendered here -->
+    </div>
+
+    <!-- Templates -->
+    <template id="home-template">
+        <header class="app-header">
+            <h1>Flashcards</h1>
+            <p>Select a chapter to start learning</p>
+        </header>
+        <main class="home-main">
+            <ul id="chapter-list" class="chapter-list">
+                <!-- Chapter items will be injected here -->
+            </ul>
+        </main>
+    </template>
+
+    <template id="study-template">
+        <header class="study-header">
+            <button id="back-btn" class="icon-btn" aria-label="Back">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <div class="header-content">
+                <h2 id="chapter-title">Chapter Title</h2>
+                <span class="subtitle">Based on 1 source</span>
+            </div>
+        </header>
+
+        <main class="study-main">
+            <div class="card-container">
+                <div id="flashcard" class="flashcard">
+                    <div class="card-face card-front">
+                        <div class="card-content" id="card-front-content"></div>
+                        <div class="card-hint">See answer</div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="card-content" id="card-back-content"></div>
+                        <button id="explain-btn" class="explain-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M2 21l21-9-9-9-9 9zm21-9l-9 9"/> <!-- Placeholder icon -->
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                            </svg>
+                            Explain
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="study-footer">
+            <div class="controls">
+                <button id="prev-btn" class="control-btn" aria-label="Previous">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                </button>
+                <span id="progress-display">1 / 10</span>
+                <button id="next-btn" class="control-btn" aria-label="Next">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </button>
+            </div>
+        </footer>
+    </template>
+
+    <div id="toast" class="toast hidden">Copied to clipboard</div>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
