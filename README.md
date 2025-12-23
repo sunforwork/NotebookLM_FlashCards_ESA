@@ -1,3 +1,6 @@
+项目预览地址:https://nmflashcards.yuchen.pw
+Github仓库地址:https://github.com/sunforwork/NotebookLM_FlashCards_ESA
+
 # Flashcards 学习网站
 
 本项目将从 NotebookLM 导出的 flashcards CSV 文件转换为一个面向移动端优化的静态网站，便于学习与复习。项目配置为可在阿里云 ESA Pages 上一键构建、部署和托管。
@@ -5,6 +8,8 @@
 > 声明：本项目由阿里云ESA提供加速、计算和保护
 
 ![阿里云 ESA](https://img.alicdn.com/imgextra/i3/O1CN01H1UU3i1Cti9lYtFrs_!!6000000000139-2-tps-7534-844.png)
+
+
 
 ## 特性
 
